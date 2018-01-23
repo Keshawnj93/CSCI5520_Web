@@ -101,7 +101,7 @@ public class Exercise37_13 extends HttpServlet {
         //Connect to Database
         connection = null;
         try{
-            connection = DriverManager.getConnection("jdbc:mysql://localhost/javabook", "root", "Flylow13");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost/javabook", "scott", "tiger");
         } catch (Exception e){
             System.out.println ("Error connecting to server");
             System.exit(0);
