@@ -4,9 +4,17 @@
         <servlet-name>Exercise37_01</servlet-name>
         <servlet-class>Exercise37_01</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Exercise37_13</servlet-name>
+        <servlet-class>Exercise37_13.Exercise37_13</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Exercise37_01</servlet-name>
         <url-pattern>/Exercise37_01</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Exercise37_13</servlet-name>
+        <url-pattern>/Exercise37_13</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
