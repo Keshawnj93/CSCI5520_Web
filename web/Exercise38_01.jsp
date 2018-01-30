@@ -1,6 +1,6 @@
 <%-- 
 * Keshawn Jones
-* January 17, 2018
+* January 28, 2018
 * CSCI 5520
 * Exercise 38.01 Write a java server page to display a table that contains factorials 
 * for the numbers from 0 to 10.
