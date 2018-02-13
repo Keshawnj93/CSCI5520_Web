@@ -1,12 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+//FactorialBean.java
+
 package Exercise39_01;
 
-import java.math.BigInteger;
-import java.text.NumberFormat;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.inject.Named;
@@ -58,12 +53,6 @@ public class FactorialBean {
     
     public void setFactorial(){
         
-    }
-    
-    
-    public static String format(BigInteger number){
-        NumberFormat format = NumberFormat.getNumberInstance();
-        return format.format(number);
     }
     
 }
