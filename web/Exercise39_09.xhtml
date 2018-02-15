@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- /*
+* Keshawn Jones
+* February 5, 2018
+* CSCI 5520
+* (Access and update a Staff table) Write a JSP for Exercise 33.1, as shown in
+* Figure 38.17.
+*/-->
+
+<!-- Exercise 39_09.xhtml /-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Exercise 39.09</title>
+    </h:head>
+    <h:body>
+        <h2>Staff Table using JSF</h2>
+        <h:form style="border: 1px solid black">
+            <p>Staff Information</p>
+            
+            <h:panelGrid columns ="2">
+                <h:outputLabel value="ID: "/>
+                <h:inputText id="idInputText" value="#{databaseBean.id}" />
+            </h:panelGrid>
+                
+            <h:panelGrid columns="6">
+                <h:outputLabel value="Last Name: "/>
+                <h:inputText id="lastNameInputText" value="#{databaseBean.lastName}" />
+                <h:outputLabel value="First Name: "/>
+                <h:inputText id="firstNameInputText" value="#{databaseBean.firstName}" />
+                <h:outputLabel value="MI: "/>
+                <h:inputText id="miInputText" value="#{databaseBean.mi}" size="1" />
+            </h:panelGrid>
+            
+            <h:panelGrid columns ="2">
+                <h:outputLabel value="Address: "/>
+                <h:inputText id="addressInputText" value="#{databaseBean.address}" />
+            </h:panelGrid>
+            
+            <h:panelGrid columns ="4">
+                <h:outputLabel value="City: "/>
+                <h:inputText id="cityInputText" value="#{databaseBean.city}" />
+                <h:outputLabel value="State: "/>
+                <h:inputText id="stateInputText" value="#{databaseBean.state}" size="1" />
+            </h:panelGrid>
+            
+            <h:panelGrid columns ="2">
+                <h:outputLabel value="Telephone: "/>
+                <h:inputText id="telephoneInputText" value="#{databaseBean.telephone}" />
+            </h:panelGrid>
+            
+            <h:panelGrid columns ="2">
+                <h:outputLabel value="Email: "/>
+                <h:inputText id="emailInputText" value="#{databaseBean.email}" />
+            </h:panelGrid>
+            
+            <h:panelGrid columns ="4">
+                <h:commandButton value="View" action="#{databaseBean.act}" >
+                    <f:setPropertyActionListener target="#{databaseBean.mode}" value="View" />
+                </h:commandButton>
+                
+                <h:commandButton value="Insert" action="#{databaseBean.act}" >
+                    <f:setPropertyActionListener target="#{databaseBean.mode}" value="Insert" />
+                </h:commandButton>
+                <h:commandButton value="Update" action="#{databaseBean.act}" >
+                    <f:setPropertyActionListener target="#{databaseBean.mode}" value="Update" />
+                </h:commandButton>
+                <h:commandButton value="Clear" action="#{databaseBean.act}" >
+                    <f:setPropertyActionListener target="#{databaseBean.mode}" value="Clear" />
+                </h:commandButton>
+            </h:panelGrid>
+        </h:form>
+        
+        <h:panelGrid columns ="1">
+            <h:outputLabel value="#{databaseBean.message}"/>
+        </h:panelGrid>
+    </h:body>
+</html>
+

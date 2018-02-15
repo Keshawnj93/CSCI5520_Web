@@ -1,19 +1,27 @@
-//DBBean.java (Used to perform database actions in Exercise 38.19.jsp
 
-package Exercise38_19;
+package Exercise39_09;
 
+import java.io.Serializable;
+import javax.inject.Named;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
 
-public class DBBean {
+
+@Named(value = "databaseBean")
+@ManagedBean
+@RequestScoped
+
+public class DatabaseBean{
     String id, lastName, firstName, mi, address, city, state, telephone, email, mode, message;
     PreparedStatement psmt;
     Connection conn;
     
-    public DBBean(){
+    public DatabaseBean(){
         id = lastName = firstName = mi = address = city = state = telephone = email = mode = message = "";
         psmt = null;
         conn = null;
@@ -180,7 +188,7 @@ public class DBBean {
                 telephone = res.getString(8);
                 email = res.getString(9);
                 
-                message = "<p>ID: " +id + " was found</p>";
+                message = "ID: " +id + " was found";
             }
         } catch(Exception e){
             message = "Error in retrieval";
